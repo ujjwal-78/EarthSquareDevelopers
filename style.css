@@ -1,0 +1,52 @@
+/* main page area css  */
+#content-area-row {
+  padding-top: 40px;
+  padding-left: 40px;
+}
+
+/* left navigation */
+#visibility {
+  /* background: #f8f9fa; */
+  color: rgb(0, 0, 0);
+}
+
+#visibility a:hover {
+  background: #555555;
+  color: rgb(255, 255, 255);
+}
+
+@media screen and (max-width: 991px) {
+  #visibility {
+    display: none;
+  }
+}
+
+#list-tab1 {
+  columns: white;
+}
+
+/* home section css  */
+#heading {
+  text-align: center;
+  padding: 20px 0;
+}
+
+#pageg-content {
+  border: 1px solid rgb(247, 235, 235);
+  box-shadow: 5px 10px 8px #888888;
+}
+
+tbody {
+  color: rgb(125 123 123);
+}
+
+.paragraph {
+  color: rgb(125 123 123);
+  font-weight: 500;
+}
+/* home section css ends */
+
+/* plot voluntary */
+#plot-head {
+  padding: 20px 0;
+}

@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- css link  -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- bootstrap css -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <!-- page title -->
+    <title>Earth Square Developers</title>
+
+    <!-- The fav icon -->
+    <link rel="shortcut icon" href="#">
+  </head>
+
+
+  <body>
+    <!-- navigation bar starts -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand justify-content-start" href="index.html">EARTH SQUARE DEVELOPERS</a>
+
+      <ul class="navbar-nav ml-auto" id="dropdown">
+        <!-- user dropdown button  -->
+        <div class="dropdown ml-auto" id="down">
+          <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user"></i> User </button>
+          <div class="dropdown-menu dropdown-menu-lg-left" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Edit Details</a>
+            <a class="dropdown-item" href="#">Log Out</a>
+          </div>
+        </div>
+
+        <!-- theme/skin button  -->
+        <div class="dropdown" id="down">
+          <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Change Theme / Skin</button>
+
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Classic</a>
+            <a class="dropdown-item" href="#">Cerulean</a>
+            <a class="dropdown-item" href="#">Cyborg</a>
+            <a class="dropdown-item" href="#">Simplex</a>
+            <a class="dropdown-item" href="#">Darkly</a>
+            <a class="dropdown-item" href="#">Lumen</a>
+            <a class="dropdown-item" href="#">Slate</a>
+            <a class="dropdown-item" href="#">Spacelab</a>
+            <a class="dropdown-item" href="#">United</a>
+          </div>
+        </div>
+      </ul>
+    </nav>
+
+    <!-- collapsible nav list starts  -->
+    <div class="list-group collapse navbar-collapse" id="navbarSupportedContent">
+      <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Home</a>
+      <a class="list-group-item list-group-item-action" id="list-plot-list" data-toggle="list" href="#list-plot" role="tab" aria-controls="plot">Plot Inventory</a>
+      <a class="list-group-item list-group-item-action" id="list-maps-list" data-toggle="list" href="#list-maps" role="tab" aria-controls="maps">View Map</a>
+      <a class="list-group-item list-group-item-action" id="list-direct-member-list" data-toggle="list" href="#list-direct-member" role="tab" aria-controls="settings">View Direct Members</a>
+      <a class="list-group-item list-group-item-action" id="list-down-member-list" data-toggle="list" href="#list-down-member" role="tab" aria-controls="settings">View Down Members</a>
+      <a class="list-group-item list-group-item-action" id="list-tree-list" data-toggle="list" href="#list-tree" role="tab" aria-controls="settings">Tree</a>
+      <a class="list-group-item list-group-item-action" id="list-dp-member-list" data-toggle="list" href="#list-dp-member" role="tab" aria-controls="settings">Down-Payment Members</a>
+      <a class="list-group-item list-group-item-action" id="list-payments-list" data-toggle="list" href="#list-payments" role="tab" aria-controls="settings">Payments</a>
+      <a class="list-group-item list-group-item-action" id="list-income-list" data-toggle="list" href="#list-income" role="tab" aria-controls="settings">Income Summary</a>
+      <a class="list-group-item list-group-item-action" id="list-details-list" data-toggle="list" href="#list-details" role="tab" aria-controls="settings">Edit Details</a>
+      <a class="list-group-item list-group-item-action" id="list-logout-list" data-toggle="list" href="#list-logout" role="tab" aria-controls="settings">Log Out</a>
+    </div>
+    <!-- collapsible nav list ends  -->
+
+
+    <!-- main page starts  -->
+    <div class="row" id="content-area-row">
+      <!-- left navigation starts  -->
+      <div class="col-2" id="visibility">
+        <div class="list-group" id="list-tab" role="tablist">
+          <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Home</a>
+          <a class="list-group-item list-group-item-action" id="list-plot-list" data-toggle="list" href="#list-plot" role="tab" aria-controls="plot">Plot Inventory</a>
+          <a class="list-group-item list-group-item-action" id="list-maps-list" data-toggle="list" href="#list-maps" role="tab" aria-controls="maps">View Map</a>
+          <a class="list-group-item list-group-item-action" id="list-direct-member-list" data-toggle="list" href="#list-direct-member" role="tab" aria-controls="settings">View Direct Members</a>
+          <a class="list-group-item list-group-item-action" id="list-down-member-list" data-toggle="list" href="#list-down-member" role="tab" aria-controls="settings">View Down Members</a>
+          <a class="list-group-item list-group-item-action" id="list-tree-list" data-toggle="list" href="#list-tree" role="tab" aria-controls="settings">Tree</a>
+          <a class="list-group-item list-group-item-action" id="list-dp-member-list" data-toggle="list" href="#list-dp-member" role="tab" aria-controls="settings">Down-Payment Members</a>
+          <a class="list-group-item list-group-item-action" id="list-payments-list" data-toggle="list" href="#list-payments" role="tab" aria-controls="settings">Payments</a>
+          <a class="list-group-item list-group-item-action" id="list-income-list" data-toggle="list" href="#list-income" role="tab" aria-controls="settings">Income Summary</a>
+          <a class="list-group-item list-group-item-action" id="list-details-list" data-toggle="list" href="#list-details" role="tab" aria-controls="settings">Edit Details</a>
+          <a class="list-group-item list-group-item-action" id="list-logout-list" data-toggle="list" href="#list-logout" role="tab" aria-controls="settings">Log Out</a>
+        </div>
+      </div>
+      <!-- left navigation ends  -->
+
+      <!-- right section content starts  -->
+      <div class="col-10">
+        <div class="tab-content" id="nav-tabContent">
+          <!-- home section starts  -->
+          <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+            <h6 id="heading">Welcome Sanjay Bhandaria</h6>
+            <div class="container col-10" id="page-content">
+              <h6 class="mx-5 my-4">Congratulations to eligible Team Members of the Earth Square for Manali Tour on 08/12/2020</h6>
+              <img src="http://www.earthsquaredevelopers.com/earth4.png" alt="..." class="img-thumbnail">
+              <br><br>
+              <div class="table-responsive">
+                <table class="table table-hover my-4">
+                  <tbody>
+                    <tr>
+                      <th>User Id</th>
+                      <th>EarthSquare982</td>
+                    </tr>
+                    <tr>
+                      <th>Name</th>
+                      <th>Sanjay Bhandari</td>
+                    </tr>
+                    <tr>
+                      <th>Phone</th>
+                      <th>9971635368</td>
+                    </tr>
+                    <tr>
+                      <th>DOB</th>
+                      <th>10.2.1967</td>
+                    </tr>
+                    <tr>
+                      <th>PAN No.</th>
+                      <th>AOZPB7706H</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+    
+              <p class="paragraph mx-3 my-3">We welcome you in Earth Square Developers Pvt. Ltd.</p>
+              <p class="paragraph mx-3 my-3">If you are looking for safe and best property option then come and join us. we provide 100% risk free property under your budget.</p>
+              <p class="para mx-3 my-3">Earth Square Developers Pvt. Ltd., the company is in the real estate business for over a decade now. We enjoy a formidable reputation among real estate investors and all the prominent builders in the country. We offer the entire gamut of services including buying, selling of properties and are registered with all the leading buildings.</p>
+            </div> 
+          </div><br><br>
+          <!-- home section ends  -->
+
+          <!-- plot involuntry starts  -->
+          <div class="tab-pane fade" id="list-plot" role="tabpanel" aria-labelledby="list-plot-list">
+            <h6 id="plot-head">Welcome Sanjay Bhandaria</h6>
+            <form action="">
+              <div class="form-row">
+                <div class="form-group col-md-2">
+                  <label for="project">Project</label>
+                </div>
+                <div class="form-group col-md-4">
+                  <select id="project" class="form-control">
+                    <option selected>Choose...</option>
+                    <option value="">EarthSquare Phase I </option>
+                    <option value="">EarthSquare Phase II</option>
+                    <option value="">EarthSquare Phase III</option>
+                    <option value="">EarthSquare Phase IIIA</option>
+                    <option value="">EarthSquare Phase IV</option>
+                    <option value="">EarthSquare Phase V</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-2">
+                  <label for="block">Block</label>
+                </div>
+                <div class="form-group col-md-1">
+                  <select id="block" class="form-control">
+                    <option selected></option>
+                    <option value="">A</option>
+                    <option value="">B</option>
+                    <option value="">C</option>
+                    <option value="">D</option>
+                    <option value="">E</option>
+                    <option value="">F</option>
+                    <option value="">G</option>
+                    <option value="">H</option>
+                    <option value="">I</option>
+                    <option value="">J</option>
+                    <option value="">K</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-1">
+                  <a class="btn btn-primary" href="#" role="button">Show</a>
+                </div>
+                <div class="form-group col-md-1">
+                  <a class="btn btn-primary" href="#" role="button">All</a>
+                </div>
+              </div>
+            </form>
+          </div>
+          <!-- plot involuntry ends  -->
+
+          <!-- maps navigation starts -->
+          <div class="tab-pane fade" id="list-maps" role="tabpanel" aria-labelledby="list-maps-list">...3</div>
+          <!-- maps navigation ends -->
+
+          <!-- direct members navigation starts  -->
+          <div class="tab-pane fade" id="list-direct-member" role="tabpanel" aria-labelledby="list-direct-member-list">
+            <h6 id="plot-head">Welcome Sanjay Bhandaria</h6>
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th scope="col" class="bg-dark text-white">Userid</th>
+                  <th scope="col" class="bg-dark text-white">Name</th>
+                  <th scope="col" class="bg-dark text-white">Father's Name</th>
+                  <th scope="col" class="bg-dark text-white">SopnserId</th>
+                  <th scope="col" class="bg-dark text-white">Mob No.</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">EarthSquare1379</th>
+                  <th scope="row">Asgar Ali</th>
+                  <th scope="row">Late Ali Ahmad</th>
+                  <th scope="row">earthsquare982</th>
+                  <th scope="row">9667496409</th>
+                  
+                </tr>
+                <tr>
+                  <th scope="row">EarthSquare1444</th>
+                  <th scope="row">Ashok Mukhiya</th>
+                  <th scope="row">Late Suttalal Mukhiya</th>
+                  <th scope="row">earthsquare982</th>
+                  <th scope="row">9910849125</th>
+                </tr>
+                <tr>
+                  <th scope="row">EarthSquare1465</th>
+                  <th scope="row">Anguri Khatun</th>
+                  <th scope="row">Md. Jahangir</th>
+                  <th scope="row">earthsquare982</th>
+                  <th scope="row">9650653622</th>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- direct member navigation ends -->
+
+          <!-- down member navigation starts  -->
+          <div class="tab-pane fade" id="list-down-member" role="tabpanel" aria-labelledby="list-down-member-list">
+            <h6 id="plot-head">Welcome Sanjay Bhandaria</h6>
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th scope="col" class="bg-dark text-white"></th>
+                  <th scope="col" class="bg-dark text-white">Levels</th>
+                  <th scope="col" class="bg-dark text-white">Total Members</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row"><a href="">Select</a></th>
+                  <th scope="row">1</th>
+                  <th scope="row">3</th>
+                </tr>
+                <tr>
+                  <th scope="row"><a href="">Select</a></th>
+                  <th scope="row">2</th>
+                  <th scope="row">6</th>
+                </tr>
+                <tr>
+                  <th scope="row"><a href="">Select</a></th>
+                  <th scope="row">3</th>
+                  <th scope="row">3</th>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- down member navigation ends  -->
+
+          <!-- tree navigation starts  -->
+          <div class="tab-pane fade" id="list-tree" role="tabpanel" aria-labelledby="list-tree-list">...</div>
+          <!-- tree navigation ends  -->
+
+          <!-- down-payment navigation starts  -->
+          <div class="tab-pane fade" id="list-dp-member" role="tabpanel" aria-labelledby="list-dp-member-list">
+            <h6 id="plot-head">Welcome Sanjay Bhandaria</h6>
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th scope="col" class="bg-dark text-white">Payment Dtls</th>
+                  <th scope="col" class="bg-dark text-white">UserId</th>
+                  <th scope="col" class="bg-dark text-white">Name</th>
+                  <th scope="col" class="bg-dark text-white">SponserId</th>
+                  <th scope="col" class="bg-dark text-white">AgentId</th>
+                  <th scope="col" class="bg-dark text-white">Project</th>
+                  <th scope="col" class="bg-dark text-white">Plot No.</th>
+                  <th scope="col" class="bg-dark text-white">Plot Size</th>
+                  <th scope="col" class="bg-dark text-white">Payable</th>
+                  <th scope="col" class="bg-dark text-white">Paid</th>
+                  <th scope="col" class="bg-dark text-white">Balance</th>
+                  <th scope="col" class="bg-dark text-white">%age</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row"><a class="btn btn-primary" href="#" role="button">PaymntHistry</a></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                </tr>
+                <tr>
+                  <th scope="row"><a class="btn btn-primary" href="#" role="button">PaymntHistry</a></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                </tr>
+                <tr>
+                  <th scope="row"><a class="btn btn-primary" href="#" role="button">PaymntHistry</a></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                </tr>
+                <tr>
+                  <th scope="row"><a class="btn btn-primary" href="#" role="button">PaymntHistry</a></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                </tr>
+                <tr>
+                  <th scope="row"><a class="btn btn-primary" href="#" role="button">PaymntHistry</a></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                </tr>
+                <tr>
+                  <th scope="row"><a class="btn btn-primary" href="#" role="button">PaymntHistry</a></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                </tr>
+                <tr>
+                  <th scope="row"><a class="btn btn-primary" href="#" role="button">PaymntHistry</a></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                </tr>
+                <tr>
+                  <th scope="row"><a class="btn btn-primary" href="#" role="button">PaymntHistry</a></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                </tr>
+                <tr>
+                  <th scope="row"><a class="btn btn-primary" href="#" role="button">PaymntHistry</a></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                </tr>
+                
+              </tbody>
+            </table>
+          </div>
+          <!-- down-payment navigation ends  -->
+
+          <!-- your Payment starts  -->
+          <div class="tab-pane fade" id="list-payments" role="tabpanel" aria-labelledby="list-payments-list">
+            
+            <h6 id="plot-head">Welcome Sanjay Bhandaria</h6>
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th scope="col" class="bg-dark text-white">Payment Dtls</th>
+                  <th scope="col" class="bg-dark text-white">UserId</th>
+                  <th scope="col" class="bg-dark text-white">Name</th>
+                  <th scope="col" class="bg-dark text-white">SponserId</th>
+                  <th scope="col" class="bg-dark text-white">AgentId</th>
+                  <th scope="col" class="bg-dark text-white">Project</th>
+                  <th scope="col" class="bg-dark text-white">Plot No.</th>
+                  <th scope="col" class="bg-dark text-white">Plot Size</th>
+                  <th scope="col" class="bg-dark text-white">Payable</th>
+                  <th scope="col" class="bg-dark text-white">Paid</th>
+                  <th scope="col" class="bg-dark text-white">Balance</th>
+                  <th scope="col" class="bg-dark text-white">%age</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                </tr>
+                <tr>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                </tr>
+                <tr>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                </tr>
+                <tr>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                </tr>
+                <tr>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                </tr> 
+              </tbody>
+            </table>
+          </div>
+          <!-- your Payment navigaTION ends  -->
+
+          <!-- income summary starts  -->
+          <div class="tab-pane fade" id="list-income" role="tabpanel" aria-labelledby="list-income-list">
+            <h6 id="plot-head">Welcome Sanjay Bhandaria</h6>
+            <table class="table table-bordered table-striped">
+              <thead>
+                <tr>
+                  <th scope="col" class="bg-dark text-white">Category</th>
+                  <th scope="col" class="bg-dark text-white">Details</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">UserId</th>
+                  <th scope="row">Lorem ipsum dolor sit amet consectetur.</th>
+                </tr>
+                <tr>
+                  <th scope="row">Name</th>
+                  <th scope="row">2</th>
+                </tr>
+                <tr>
+                  <th scope="row">Mobile No.</th>
+                  <th scope="row">3</th>
+                </tr>
+                <tr>
+                  <th scope="row">Pan No.</th>
+                  <th scope="row">3</th>
+                </tr>
+                <tr>
+                  <th scope="row">SponserId</th>
+                  <th scope="row">3</th>
+                </tr>
+                <tr>
+                  <th scope="row">Post</th>
+                  <th scope="row">3</th>
+                </tr>
+                <tr>
+                  <th scope="row">Direct Sale</th>
+                  <th scope="row">3</th>
+                </tr>
+                <tr>
+                  <th scope="row">Group Sale</th>
+                  <th scope="row">3</th>
+                </tr>
+                <tr>
+                  <th scope="row">Post Short By</th>
+                  <th scope="row">3</th>
+                </tr>
+                <tr>
+                  <th scope="row">Income Level</th>
+                  <th scope="row">3</th>
+                </tr>
+                <tr>
+                  <th scope="row">Incentives</th>
+                  <th scope="row">3</th>
+                </tr>
+                <tr>
+                  <th scope="row">Total</th>
+                  <th scope="row">3</th>
+                </tr>
+                <tr>
+                  <th scope="row">TDS Deduction</th>
+                  <th scope="row">3</th>
+                </tr>
+                <tr>
+                  <th scope="row">Net Income</th>
+                  <th scope="row">3</th>
+                </tr>
+                <tr>
+                  <th scope="row">Awards</th>
+                  <th scope="row">3</th>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- income summary endss  -->
+
+          <!-- edit details section starts  -->
+          <div class="tab-pane fade" id="list-details" role="tabpanel" aria-labelledby="list-details-list">
+            <h6 id="plot-head">Welcome Sanjay Bhandaria</h6>
+            <form>
+              <div class="form-group row">
+                <label for="name" class="col-sm-2 col-form-label">Name</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" id="name" placeholder="FullName">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="fname" class="col-sm-2 col-form-label">Father's Name</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" id="fname" placeholder="Father's FullName">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="input-email" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-6">
+                  <input type="email" class="form-control" id="input-email" placeholder="Email">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+                <div class="col-sm-6">
+                  <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group  col-md-2">
+                  <label for="gender">Gender</label>
+                </div>
+                <div class="form-group col-md-2">
+                  <select id="gender" class="form-control">
+                    <option value="">Male</option>
+                    <option value="">Female</option>
+                    <option value="">Others</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="mobile" class="col-sm-2 col-form-label">Mobile No.</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" id="mobile" placeholder="" maxlength="10">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="pan" class="col-sm-2 col-form-label">PAN No.</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" id="pan" placeholder="">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="address" class="col-sm-2 col-form-label">Address</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" id="address" placeholder="">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="doj" class="col-sm-2 col-form-label">DOJ</label>
+                <div class="col-sm-2">
+                  <input type="date" class="form-control" id="doj" placeholder="">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="id" class="col-sm-2 col-form-label">SponserId</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" id="id" placeholder="">
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-sm-10">
+                  <button type="submit" class="btn btn-primary">Update</button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <!-- edit details section ends  -->
+
+          <!-- logout  -->
+          <div class="tab-pane fade" id="list-logout" role="tabpanel" aria-labelledby="list-logout-list"></div>
+        </div>
+      </div>
+      <!-- right section content starts  -->
+    </div>
+    <!-- main page ends -->
+
+
+
+    
+
+      
+
+    <!-- bootstrap js  -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
